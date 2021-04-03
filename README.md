@@ -8,8 +8,6 @@ It's an 8'x20' car hauler, converted into a travel trailer.
 
 If I could change one thing, I would start with a lighter trailer. Car haulers have massive floor joists which just add unnecessary weight for a travel trailer. However, commercially manufactured travel trailers are poorly built, leak, and fall apart. Utility trailers don't have any of these problems. I expect this thing to last forever.
 
-We didn't want to cut holes in the frame or skin, so we built a false wall on the back. This quickly became our main entrance/exit as it's much nicer than the side door on the trailer.
-
 ## Construction
 
 ![insulate spaces](./pics/insulation-1.jpg)
@@ -57,6 +55,8 @@ It also put a lot of "under bed storage" at the tail, which isn't where you want
 ![back wall](./pics/back-wall.jpg)
 
 We wanted more light, and a second door, but we didn't want to cut holes in the frame or skin. So we built a false wall on the back. This quickly became our main entrance/exit as it's much nicer than the side door on the trailer.
+
+Plans for the back wall are in [Trailer Wall.skp](./Trailer%20Wall.skp).
 
 ![view from back](./pics/view-from-back.jpg)
 
@@ -122,39 +122,92 @@ The whole setup stores here on the driver's side during travel.
 
 ![batteries](./pics/batteries.jpg)
 
+Under the foot of the queen bed, I have 3 48v Li-ion batteries. Each of these is 79 amp hours. That makes a total of over 11 kwh, or the equivalent of 950 amp hours at 12v.
+
+I used to have these right at the front of the camper, under the head of the queen bed. They are heavy. And having them there pushed my tongue weight too high. Moving them back 5 ft shaved about 200 lbs off the tongue weight. In their new position, I had to build bracing around them to ensure they don't move during travel.
+
 ### Inverter/Charger
 
 ![inverter/charger](./pics/inverter-charger.jpg)
 
+On the driver's side, just in front of the batteries, I have a Growatt 3kw 48v all-in-one charger/inverter. This connects to solar, batteries, AC in, and AC out. It intelligently routes and converts power between these systems.
+
 ![raspberry-pi](./pics/raspberry-pi.jpg)
+
+The charger/inverter has a USB modbus interface. I use a raspberry pi zero-w to monitor data from the charger/inverter. It also monitors location/speed data from a USB GPS receiver. The raspberry pi is a flexible platform that I can easily extend in the future to add additional monitoring and controls.
+
+All of this data is made available to an iOS app via a websockets interface.
+
+The raspberry pi also has a VPN client running, connecting back to my own VPN server. This allows me to connect to the pi from anywhere using a client-to-client VPN connection.
+
+The code running on the raspberry pi can be found at [https://github.com/joshgubler/trailer-monitor-rpi/](https://github.com/joshgubler/trailer-monitor-rpi/).
+
+The code for the iOS app can be found at  [https://github.com/joshgubler/trailer-monitor-ios/](https://github.com/joshgubler/trailer-monitor-ios/).
 
 ### Wiring
 
 ![48 volt wiring](./pics/48-volt.jpg)
 
-48 volt wiring connection inverter/charger to batteries
+The batteries are connected to the charger/inverter in parallel via 4 awg cables and 250 amp busbars. All cables had to be the same length to ensure that the batteries all get the same charge.
 
 ![12 volt wiring](./pics/12-volt.jpg)
 
-48v to 12v buck converter and fuses power fan, lighting, and break-away switch fro trailer brakes.
+At the front of the trailer, a buck converter steps the 48v power down to 12v. A 100 amp busbar and fuses connect this power to the existing trailer wiring for the fan, lighting, and break-away switch for trailer brakes.
+
+I chose to put this close to where the existing trailer wiring ties in, so that I could use lighter gauge wire to the buck converter. (The same load uses less amps at 48v than at 12v.)
 
 ### Solar
 
+![solar panels installed](./pics/solar-finished.jpg)
+
+On the roof, I built a rack to which I mounted 20 100w solar panels. The rack is bolted to the trailer frame through the sides of the trailer so that nothing punctures the roof.
+
+Plans for the solar rack and layout are in [Trailer Solar.skp](./Trailer%20Solar.skp).
+
 ![testing solar wiring](./pics/solar-wiring.jpg)
 
-![solar panels installed](./pics/solar-finished.jpg)
+I laid everything out in my garage to figure out how everything needed to bolt together, and to figure out wiring.
+
+You can trade amps for volts based on how you wire the panels. I needed to find a configuration that provided more than 48v (my battery voltage) and less than 150v (the max rating of my charger).
+
+I wired the panels into strings of 5 in series, and then 4 strings in parallel (5s4p). This gives me about 20 amps and 100v at peak production.
+
+I considered removing the fan vent cover from the roof of the trailer, adding a 21st panel, and doing a 7s3p configuration. But this would have put the system at 140v, and that's just too close to the 150v max (especially since panels often overproduce when they are cold).
 
 ![solar panels dirty](./pics/solar-dirt.jpg)
 
-## AC/Heat
+Apparently my panels collect dirt.
 
-![inside ac/heat and washer](./pics/ac-washer.jpg)
+## AC/Heat
 
 ![outside ac/heat](./pics/ac.jpg)
 
+I mounted a pioneer mini split air conditioner and heat pump on the front of the trailer. The bracket is bolted to the trailer frame. All of the wiring and freon lines run down the outside of the trailer and enter through holes in the floor, so that the walls stay waterproof.
+
+Plans for the mounting bracket are in [Trailer AC Bracket.skp](./Trailer%20AC%20Bracket.skp)
+
+![inside ac/heat and washer](./pics/ac-washer.jpg)
+
+The indoor unit for the mini split is mounted on passenger side of the front wall. Below the mini split is a small washing machine.
+
+The mini split draws about 1000 watts when it's working hard. Once everything gets to temperature, and it's just maintaining, draw drops to about 400 watts. This was the most important factor in determining solar and battery capacity.
+
+With this setup, I can run the mini split in either heat or cool mode 24/7 as long as I get enough sunlight during the day. (I can also use a generator or plug in to campground power if needed.)
+
 ## Internet
+
+For internet, I use an [Instyconnect Mobile Internet Router](https://instyconnect.com). This device is comparable in price to other options, but uses newer and much higher quality components. The Instyconnect also organizes those components in a much better configuration than other options, minimizing inherent signal loss.
 
 ![modem and antenna](./pics/modem-antenna.jpg)
 
+The antenna and modem are attached to the AC mounting bracket outside the trailer.
+
 ![wifi router](./pics/router.jpg)
 
+The wifi router is inside the trailer and is connected to the 12v busbars.
+
+## Conclusion
+
+We've had a lot of fun working on this project. As you can see, it isn't finish carpentry. But it's flexible and it meets our needs. There have been fun problems to solve, and we've learned a ton. As I said earlier, the one thing I would change would be to start with a lighter trailer.
+
+It'll be a great home base for the many adventures we have planned.
