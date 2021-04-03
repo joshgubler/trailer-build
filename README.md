@@ -110,7 +110,7 @@ Also on passenger side, between the pantry and the side door, we have our freeze
 
 ![toilet](./pics/toilet.jpg)
 
-I've dealt with black water tanks before. They're the worst. A simple composting toilet is much nicer. The extra bucket lid is full of wood chips to eliminate odor.
+I've dealt with black water tanks before. They're the worst. A simple composting toilet is much nicer. The extra bucket is full of wood chips to eliminate odor.
 
 Having everything portable lets us set it up in an outdoor pop-up during the day, or in the middle curtain room at night. It's also easy to throw the whole tote in the truck when we need to empty it, or take a toilet with us on a day adventure.
 
