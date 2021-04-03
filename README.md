@@ -92,8 +92,6 @@ Raising these up gives lots of storage underneath. They're tied back to the e-tr
 
 In the middle driver's side, we have our kitchen, including an 1800w induction cooktop. I didn't want to deal with winterizing, so jugs for water; no plumbing.
 
-The curtains run on a PVC pipe frame to let us separate the space into 3 distinct rooms for privacy when needed, but easily fold away for an open feel. We love having that flexibility to change the space as needed.
-
 ![table storage](./pics/kitchen-table.jpg)
 
 The folding table stores here during travel.
@@ -106,13 +104,17 @@ In the middle passenger's side, we have the pantry. The 2x6 is the lever I use t
 
 Also on passenger side, between the pantry and the side door, we have our freezer, mirror, and our "grab and go" storage for coats and packs.
 
-### Bathroom
+![curtain-room](./pics/curtain-room.jpg)
+
+Curtains run on a PVC pipe frame to let us separate the space into 3 distinct rooms for privacy when needed, but easily fold away for an open feel. We love having that flexibility to change the space as needed.
+
+### Toilet
 
 ![toilet](./pics/toilet.jpg)
 
 I've dealt with black water tanks before. They're the worst. A simple composting toilet is much nicer. The extra bucket is full of wood chips to eliminate odor.
 
-Having everything portable lets us set it up in an outdoor pop-up during the day, or in the middle curtain room at night. It's also easy to throw the whole tote in the truck when we need to empty it, or take a toilet with us on a day adventure.
+Having everything portable lets us set it up in an outdoor pop-up during the day, or in the curtain room at night. It's also easy to throw the whole tote in the truck when we need to empty it, or take a toilet with us on a day adventure.
 
 The whole setup stores here on the driver's side during travel.
 
