@@ -118,6 +118,10 @@ The whole setup stores here on the driver's side during travel.
 
 ## Electrical
 
+![trailer systems diagram](./trailer-systems.png)
+
+(Dashed lines are not yet implemented. Colored lines indicate different, incompatible voltages.)
+
 ### Batteries
 
 ![batteries](./pics/batteries.jpg)
