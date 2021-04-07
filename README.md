@@ -182,7 +182,7 @@ I considered removing the fan vent cover from the roof of the trailer, adding a 
 
 ![solar panels dirty](./pics/solar-dirt.jpg)
 
-Apparently my panels collect dirt.
+Apparently my panels collect dirt. This little bit of dirt killed 70% of my solar production. I was only getting 600w instead of 2kw. 
 
 ## AC/Heat
 
